@@ -49,7 +49,6 @@ const EXTRA_IMGS = {
   40: ["https://images.unsplash.com/photo-1607853202273-797f1c22a38e?w=600&q=80","https://images.unsplash.com/photo-1578303512597-81e6cc155b3e?w=600&q=80","https://images.unsplash.com/photo-1579586337278-3befd40fd17a?w=600&q=80"],
   41: ["https://images.unsplash.com/photo-1578303512597-81e6cc155b3e?w=600&q=80","https://images.unsplash.com/photo-1607853202273-797f1c22a38e?w=600&q=80","https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=600&q=80"],
   42: ["https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=600&q=80","https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600&q=80","https://images.unsplash.com/photo-1579586337278-3befd40fd17a?w=600&q=80"],
-
   43: ["https://images.unsplash.com/photo-1610945264803-c22b62d2a7b3?w=600&q=80","https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?w=600&q=80","https://images.unsplash.com/photo-1585060544812-6b45742d762f?w=600&q=80"],
   44: ["https://images.unsplash.com/photo-1678685888221-cda773a3dcdb?w=600&q=80","https://images.unsplash.com/photo-1695048133142-1a20484d2569?w=600&q=80","https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=600&q=80"],
   45: ["https://images.unsplash.com/photo-1585060544812-6b45742d762f?w=600&q=80","https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=600&q=80","https://images.unsplash.com/photo-1580910051074-3eb694886505?w=600&q=80"],
@@ -108,7 +107,6 @@ const EXTRA_IMGS = {
   98: ["https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=600&q=80","https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600&q=80","https://images.unsplash.com/photo-1593784991095-a205069470b6?w=600&q=80"],
   99: ["https://images.unsplash.com/photo-1607853202273-797f1c22a38e?w=600&q=80","https://images.unsplash.com/photo-1579586337278-3befd40fd17a?w=600&q=80","https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=600&q=80"],
   100:["https://images.unsplash.com/photo-1578303512597-81e6cc155b3e?w=600&q=80","https://images.unsplash.com/photo-1607853202273-797f1c22a38e?w=600&q=80","https://images.unsplash.com/photo-1593784991095-a205069470b6?w=600&q=80"],
-
 };
 
 const DATA = [
@@ -154,8 +152,6 @@ const DATA = [
   { id:40, cat:"Электроника",  title:"PlayStation 5",            price:74999,  stock:0,  desc:"4K 120fps, Ray Tracing, SSD 825GB, DualSense",                   img:"https://images.unsplash.com/photo-1607853202273-797f1c22a38e?w=600&q=80",  badge:"Хит"   },
   { id:41, cat:"Электроника",  title:"Nintendo Switch OLED",     price:44999,  stock:8,  desc:"7 дюйм OLED, 64GB, Joy-Con, портативный + TV режим",             img:"https://images.unsplash.com/photo-1578303512597-81e6cc155b3e?w=600&q=80",  badge:"Акция" },
   { id:42, cat:"Электроника",  title:"JBL Charge 5",             price:19999,  stock:16, desc:"40W RMS, IP67, 20 саат, PartyBoost, USB-C",                      img:"https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=600&q=80",  badge:null    },
-
-  // ── Телефондор (id 43-57) ──────────────────────────────────────────────────
   { id:43, cat:"Телефондор", title:"Samsung Galaxy S23",        price:74999,  stock:10, desc:"Snapdragon 8 Gen 2, 50MP камера, 3900mAh, Dynamic AMOLED 6.1",   img:"https://images.unsplash.com/photo-1610945264803-c22b62d2a7b3?w=600&q=80",  badge:"Акция" },
   { id:44, cat:"Телефондор", title:"iPhone 13",                 price:54999,  stock:12, desc:"A15 Bionic, 12MP камера, 3227mAh, Super Retina XDR 6.1",         img:"https://images.unsplash.com/photo-1678685888221-cda773a3dcdb?w=600&q=80",  badge:"Арзан" },
   { id:45, cat:"Телефондор", title:"Xiaomi Redmi 12",           price:12999,  stock:30, desc:"Helio G88, 50MP, 5000mAh, 33W заряд, 6.79 FHD+",                 img:"https://images.unsplash.com/photo-1585060544812-6b45742d762f?w=600&q=80",  badge:"Арзан" },
@@ -169,8 +165,6 @@ const DATA = [
   { id:53, cat:"Телефондор", title:"Nokia G42",                 price:14999,  stock:9,  desc:"Snapdragon 480+, 50MP, 5000mAh, Android 13, жөнөкөй",           img:"https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=600&q=80",  badge:null    },
   { id:54, cat:"Телефондор", title:"Asus ROG Phone 7",          price:89999,  stock:2,  desc:"Snapdragon 8 Gen 2, 165Hz AMOLED, 6000mAh, геймерский",          img:"https://images.unsplash.com/photo-1580910051074-3eb694886505?w=600&q=80",  badge:"Хит"   },
   { id:55, cat:"Телефондор", title:"Sony Xperia 5 V",           price:79999,  stock:3,  desc:"Snapdragon 8 Gen 2, 48MP Zeiss, 5000mAh, 6.1 OLED 120Hz",       img:"https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?w=600&q=80",  badge:null    },
-
-  // ── Эркек кийим (id 56-68) ────────────────────────────────────────────────
   { id:56, cat:"Эркек кийим", title:"Under Armour Спорт Жейде", price:3499,  stock:18, desc:"UA Tech материал, быстросохнущий, спорт, 6 түс",                  img:"https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600&q=80",  badge:null    },
   { id:57, cat:"Эркек кийим", title:"Tommy Hilfiger Поло",      price:5999,  stock:10, desc:"100% хлопок, classic fit, вышитый логотип, 8 түс",               img:"https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=600&q=80",  badge:"Хит"   },
   { id:58, cat:"Эркек кийим", title:"Calvin Klein Свитшот",     price:7499,  stock:6,  desc:"Французский махра, оверсайз, CK логотип, 4 түс",                  img:"https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=600&q=80",  badge:null    },
@@ -179,8 +173,6 @@ const DATA = [
   { id:61, cat:"Эркек кийим", title:"Levis Trucker Жакет",      price:9999,  stock:5,  desc:"100% деним, classic fit, нагрудный карман, 3 түс",               img:"https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=600&q=80",  badge:"Акция" },
   { id:62, cat:"Эркек кийим", title:"New Balance 574",          price:11999, stock:8,  desc:"Suede/mesh верх, ENCAP подошва, классика, 6 түс",                img:"https://images.unsplash.com/photo-1503944583220-79d8926ad5e2?w=600&q=80",  badge:null    },
   { id:63, cat:"Эркек кийим", title:"Polo Ralph Lauren Свитер", price:12999, stock:4,  desc:"100% шерсть, v-образный вырез, логотип, 5 түс",                  img:"https://images.unsplash.com/photo-1539533018447-63fcce2678e3?w=600&q=80",  badge:"Жаңы"  },
-
-  // ── Аял кийим (id 64-76) ─────────────────────────────────────────────────
   { id:64, cat:"Аял кийим", title:"Zara Тротуар Куртка",        price:8999,  stock:9,  desc:"Трикотаж + синтепон, оверсайз, 4 түс",                           img:"https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?w=600&q=80",  badge:"Жаңы"  },
   { id:65, cat:"Аял кийим", title:"H&M Трикотаж Көйнөк",       price:3499,  stock:11, desc:"Ребристый трикотаж, midi узундук, облегающий крой",              img:"https://images.unsplash.com/photo-1564584217132-2271feaeb3c5?w=600&q=80",  badge:"Хит"   },
   { id:66, cat:"Аял кийим", title:"Mango Кожаный Жакет",        price:16999, stock:3,  desc:"Эко-кожа, fitted, застёжка-молния, 2 түс",                       img:"https://images.unsplash.com/photo-1590548784585-643d2b9f2925?w=600&q=80",  badge:null    },
@@ -189,16 +181,12 @@ const DATA = [
   { id:69, cat:"Аял кийим", title:"Bershka Satin Блузка",       price:2999,  stock:15, desc:"Сатин, V-образный вырез, флорал принт, 5 түс",                   img:"https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=600&q=80",  badge:"Акция" },
   { id:70, cat:"Аял кийим", title:"Stradivarius Мини Этек",     price:2499,  stock:8,  desc:"Рубчик, мини длина, эластичный пояс, 4 түс",                     img:"https://images.unsplash.com/photo-1564584217132-2271feaeb3c5?w=600&q=80",  badge:null    },
   { id:71, cat:"Аял кийим", title:"Nike Air Max 270 Ж.",        price:12999, stock:4,  desc:"Air Max подушка, mesh верх, лёгкий, 8 түс",                      img:"https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?w=600&q=80",  badge:"Хит"   },
-
-  // ── Балдар кийим (id 72-82) ───────────────────────────────────────────────
   { id:72, cat:"Балдар кийим", title:"Nike Kids Кроссовки",     price:5999,  stock:12, desc:"Flyknit верх, Air подошва, жеңил, размер 28-38",                 img:"https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600&q=80",  badge:"Хит"   },
   { id:73, cat:"Балдар кийим", title:"Zara Kids Жайкы Көйнөк",  price:1799,  stock:15, desc:"100% хлопок, принт мультик, 2-12 жаш",                           img:"https://images.unsplash.com/photo-1519457431-44ccd64a579b?w=600&q=80",  badge:null    },
   { id:74, cat:"Балдар кийим", title:"H&M Балдар Жайкы Топ",    price:999,   stock:30, desc:"Лёгкий хлопок, яркий принт, 2-10 жаш, 5 түс",                   img:"https://images.unsplash.com/photo-1503944583220-79d8926ad5e2?w=600&q=80",  badge:"Арзан" },
   { id:75, cat:"Балдар кийим", title:"Adidas Kids Спортивный",   price:3999,  stock:8,  desc:"Полиэстер, лампасы, свободный крой, 4-14 жаш",                   img:"https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=600&q=80",  badge:null    },
   { id:76, cat:"Балдар кийим", title:"Crocs Kids Classic",       price:2999,  stock:18, desc:"Foam материал, лёгкий, быстросохнущий, размер 20-34",            img:"https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600&q=80",  badge:"Жаңы"  },
   { id:77, cat:"Балдар кийим", title:"Reima Балдар Куртка",      price:7999,  stock:5,  desc:"Водонепроницаемый, -10C, светоотражающий, 3-12 жаш",             img:"https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=600&q=80",  badge:null    },
-
-  // ── Оюнчуктар (id 78-90) ─────────────────────────────────────────────────
   { id:78, cat:"Оюнчуктар", title:"LEGO Friends Үй",            price:5999,  stock:8,  desc:"700 деталь, 4 мини-фигура, жашы 6+",                             img:"https://images.unsplash.com/photo-1587654780291-39c9404d746b?w=600&q=80",  badge:null    },
   { id:79, cat:"Оюнчуктар", title:"Jenga Оюну",                 price:1499,  stock:22, desc:"54 блок, жыгач, 2+ оюнчу, жашы 6+",                             img:"https://images.unsplash.com/photo-1559715541-5daf8a0296d0?w=600&q=80",  badge:"Арзан" },
   { id:80, cat:"Оюнчуктар", title:"Monopoly Classic",           price:2499,  stock:14, desc:"Классикалык нускасы, 2-8 оюнчу, кыргызча нускасы",              img:"https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?w=600&q=80",  badge:"Хит"   },
@@ -207,8 +195,6 @@ const DATA = [
   { id:83, cat:"Оюнчуктар", title:"Rubik's Cube 3x3",           price:999,   stock:35, desc:"Классика, скоростной механизм, жашы 8+",                         img:"https://images.unsplash.com/photo-1559715541-5daf8a0296d0?w=600&q=80",  badge:null    },
   { id:84, cat:"Оюнчуктар", title:"Конструктор Магниттик",      price:4999,  stock:9,  desc:"100 деталь, магниттик тилкелер, жашы 3+",                        img:"https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?w=600&q=80",  badge:"Жаңы"  },
   { id:85, cat:"Оюнчуктар", title:"Remote Control Машина",      price:3999,  stock:11, desc:"2.4GHz, 1:20 масштаб, 30 мин иштейт, жашы 6+",                  img:"https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=600&q=80",  badge:null    },
-
-  // ── Электроника (id 86-100) ───────────────────────────────────────────────
   { id:86, cat:"Электроника", title:"AirPods Pro 2",            price:29999, stock:9,  desc:"ANC, Adaptive Transparency, USB-C, 30 саат кейс",               img:"https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600&q=80",  badge:"Хит"   },
   { id:87, cat:"Электроника", title:"Samsung Galaxy Tab S9",    price:89999, stock:4,  desc:"Snapdragon 8 Gen 2, 11 AMOLED 120Hz, 256GB, IP68",              img:"https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=600&q=80",  badge:"Жаңы"  },
   { id:88, cat:"Электроника", title:"Logitech MX Master 3S",    price:12999, stock:13, desc:"8K DPI, тихий клик, USB-C, 70 саат, Bluetooth",                 img:"https://images.unsplash.com/photo-1607853202273-797f1c22a38e?w=600&q=80",  badge:null    },
@@ -231,14 +217,90 @@ const ICONS = {"Баары":"🏪","Телефондор":"📱","Эркек к�
 const BC    = {"Хит":{bg:"#ef4444",c:"#fff"},"Жаңы":{bg:"#922b21",c:"#fff"},"Акция":{bg:"#f59e0b",c:"#fff"},"Арзан":{bg:"#22c55e",c:"#fff"}};
 const SZ    = {"Эркек кийим":["XS","S","M","L","XL","XXL"],"Аял кийим":["XS","S","M","L","XL","XXL"],"Балдар кийим":["2-3 жаш","4-5 жаш","6-7 жаш","8-9 жаш","10-11 жаш","12-14 жаш"]};
 
+// ─── AUTHOR BADGE ─────────────────────────────────────────────────────────────
+function AuthorBadge() {
+  return (
+    <div style={{
+      display:"inline-flex",alignItems:"center",gap:8,
+      background:"linear-gradient(135deg,#1a0a08,#3d1410)",
+      border:"1px solid rgba(192,57,43,0.4)",
+      borderRadius:20,padding:"6px 16px",
+    }}>
+      <div style={{
+        width:28,height:28,borderRadius:"50%",
+        background:"linear-gradient(135deg,#c0392b,#e74c3c)",
+        display:"flex",alignItems:"center",justifyContent:"center",
+        fontSize:"0.75rem",fontWeight:900,color:"#fff",flexShrink:0,
+        boxShadow:"0 2px 8px rgba(192,57,43,0.5)"
+      }}>ЖЭ</div>
+      <div>
+        <div style={{fontSize:"0.78rem",fontWeight:800,color:"#fff",letterSpacing:"0.01em"}}>Жусупов Элдос</div>
+        <div style={{fontSize:"0.64rem",color:"rgba(255,255,255,0.45)",marginTop:1}}>Developer & Designer</div>
+      </div>
+    </div>
+  );
+}
+
+// ─── FOOTER ───────────────────────────────────────────────────────────────────
+function Footer() {
+  return (
+    <footer style={{
+      background:"linear-gradient(135deg,#0f0604,#1a0a08,#2d0d0d)",
+      borderTop:"1px solid rgba(192,57,43,0.25)",
+      padding:"32px 24px 20px",
+      marginTop:40,
+    }}>
+      <div style={{maxWidth:1060,margin:"0 auto"}}>
+        <div style={{display:"flex",justifyContent:"space-between",alignItems:"flex-start",flexWrap:"wrap",gap:24,marginBottom:28}}>
+          {/* Brand */}
+          <div>
+            <div style={{display:"flex",alignItems:"center",gap:10,marginBottom:10}}>
+              <Logo size={34}/>
+              <span style={{fontWeight:900,fontSize:"1.3rem",background:"linear-gradient(135deg,#fadbd8,#e74c3c)",WebkitBackgroundClip:"text",WebkitTextFillColor:"transparent",letterSpacing:"-0.03em"}}>Versel</span>
+            </div>
+            <p style={{color:"rgba(255,255,255,0.4)",fontSize:"0.8rem",maxWidth:220,lineHeight:1.7}}>
+              Кыргызстандын эң ишенимдүү онлайн дүкөнү. 2018-жылдан бери.
+            </p>
+          </div>
+          {/* Contact */}
+          <div>
+            <div style={{color:"rgba(255,255,255,0.6)",fontSize:"0.72rem",fontWeight:700,textTransform:"uppercase",letterSpacing:"0.08em",marginBottom:10}}>Байланыш</div>
+            {[["📞","+996 312 000 000"],["✉️","info@versel.kg"],["📍","Бишкек, Чүй 115"],["⏰","9:00-21:00 күн сайын"]].map(([icon,val])=>(
+              <div key={val} style={{display:"flex",alignItems:"center",gap:8,marginBottom:6,color:"rgba(255,255,255,0.5)",fontSize:"0.8rem"}}>
+                <span style={{fontSize:"0.9rem"}}>{icon}</span>{val}
+              </div>
+            ))}
+          </div>
+          {/* Developer credit */}
+          <div>
+            <div style={{color:"rgba(255,255,255,0.6)",fontSize:"0.72rem",fontWeight:700,textTransform:"uppercase",letterSpacing:"0.08em",marginBottom:12}}>Иштеген адам</div>
+            <AuthorBadge/>
+            <div style={{marginTop:10,display:"flex",gap:8}}>
+              {["React","JavaScript","REST API"].map(tag=>(
+                <span key={tag} style={{fontSize:"0.62rem",fontWeight:700,color:"rgba(192,57,43,0.9)",background:"rgba(192,57,43,0.12)",border:"1px solid rgba(192,57,43,0.25)",padding:"3px 8px",borderRadius:20}}>{tag}</span>
+              ))}
+            </div>
+          </div>
+        </div>
+        {/* Bottom line */}
+        <div style={{borderTop:"1px solid rgba(255,255,255,0.07)",paddingTop:16,display:"flex",justifyContent:"space-between",alignItems:"center",flexWrap:"wrap",gap:8}}>
+          <div style={{color:"rgba(255,255,255,0.25)",fontSize:"0.75rem"}}>© 2025 Versel. Бардык укуктар корголгон.</div>
+          <div style={{display:"flex",alignItems:"center",gap:6,color:"rgba(255,255,255,0.25)",fontSize:"0.75rem"}}>
+            <span>Иштеген:</span>
+            <span style={{color:"#e74c3c",fontWeight:700}}>Жусупов Элдос</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+}
+
 // ─── WHATSAPP БИЛДИРҮҮ ЖИБЕР ─────────────────────────────────────────────────
 function sendWhatsAppOrder(cart, user) {
   const total = cart.reduce((s, i) => s + i.price * i.qty, 0);
   const date = new Date().toLocaleString("ru-RU");
-  
   let msg = `🛒 *ЖАҢЫ ЗАКАЗ — ${SHOP_NAME}*\n`;
   msg += `📅 ${date}\n\n`;
-  
   if (user) {
     msg += `👤 *Кардар:* ${user.name}\n`;
     if (user.phone) msg += `📞 *Телефон:* ${user.phone}\n`;
@@ -246,35 +308,28 @@ function sendWhatsAppOrder(cart, user) {
   } else {
     msg += `👤 *Кардар:* Кирбеген колдонуучу\n\n`;
   }
-  
   msg += `📦 *Заказдалган товарлар:*\n`;
   cart.forEach((item, i) => {
     msg += `${i + 1}. ${item.title}`;
     if (item.size) msg += ` (${item.size})`;
     msg += ` × ${item.qty} шт. = ${(item.price * item.qty).toLocaleString()} ₽\n`;
   });
-  
   msg += `\n💰 *ИТОГО: ${total.toLocaleString()} ₽*`;
   msg += `\n\n✅ Заказ кабыл алуу үчүн кардар менен байланышыңыз!`;
-  
   const phone = SHOP_WHATSAPP.replace(/[^0-9]/g, "");
   const url = `https://wa.me/${phone}?text=${encodeURIComponent(msg)}`;
   window.open(url, "_blank");
 }
 
-// ─── SESSION ENCODE/DECODE ──────────────────────────────────────────────────
 const _e = d => btoa(unescape(encodeURIComponent(JSON.stringify(d))));
 const _d = s => { try { return JSON.parse(decodeURIComponent(escape(atob(s)))); } catch { return null; } }
 
-// ─── VERSEL LOGO SVG — V-канат стили (кызыл линия) ─────────────────────────
+// ─── VERSEL LOGO ──────────────────────────────────────────────────────────────
 function Logo({ size = 36 }) {
   return (
     <svg width={size} height={size} viewBox="0 0 80 72" fill="none" xmlns="http://www.w3.org/2000/svg">
-      {/* Сырткы V канаттар */}
       <polyline points="2,2 22,2 40,42 58,2 78,2 40,68 2,2" fill="none" stroke="#c0392b" strokeWidth="2.8" strokeLinejoin="miter" strokeLinecap="round"/>
-      {/* Ички V — кичине */}
       <polyline points="18,2 30,2 40,28 50,2 62,2 40,48 18,2" fill="none" stroke="#c0392b" strokeWidth="2" strokeLinejoin="miter" strokeLinecap="round"/>
-      {/* Эң ички V */}
       <polyline points="28,14 34,14 40,26 46,14 52,14 40,38 28,14" fill="none" stroke="#c0392b" strokeWidth="1.5" strokeLinejoin="miter" strokeLinecap="round"/>
     </svg>
   );
@@ -290,11 +345,11 @@ function StockTag({n, sm}) {
 
 // ─── AUTH MODAL ────────────────────────────────────────────────────────────────
 function AuthModal({mode, onClose, onLogin}) {
-  const [tab,     setTab]     = useState(mode);
-  const [f,       setF]       = useState({name:"",email:"",password:"",phone:"",avatar:""});
-  const [show,    setShow]    = useState(false);
-  const [err,     setErr]     = useState("");
-  const [loading, setLoading] = useState(false);
+  const [tab,setTab]=useState(mode);
+  const [f,setF]=useState({name:"",email:"",password:"",phone:"",avatar:""});
+  const [show,setShow]=useState(false);
+  const [err,setErr]=useState("");
+  const [loading,setLoading]=useState(false);
   const up = e => setF({...f,[e.target.name]:e.target.value});
 
   async function go() {
@@ -306,17 +361,14 @@ function AuthModal({mode, onClose, onLogin}) {
         if (found) {
           const safeUser = { id: found.id, name: found.name, email: found.email, phone: found.phone, avatar: found.avatar };
           onLogin(safeUser); onClose();
-        } else {
-          setErr("Email же сырсөз туура эмес!");
-        }
+        } else { setErr("Email же сырсөз туура эмес!"); }
       } else {
         if (!f.name || !f.email || !f.password) { setErr("Аты, email жана сырсөз керек!"); setLoading(false); return; }
         if (f.password.length < 6) { setErr("Сырсөз кеминде 6 символ!"); setLoading(false); return; }
         const checkRes = await axios.get(API);
         if (checkRes.data.find(u => u.email === f.email)) { setErr("Бул email буга чейин катталган!"); setLoading(false); return; }
         const response = await axios.post(API, {
-          name: f.name, password: f.password, email: f.email,
-          phone: f.phone,
+          name: f.name, password: f.password, email: f.email, phone: f.phone,
           avatar: f.avatar || `https://api.dicebear.com/7.x/initials/svg?seed=${encodeURIComponent(f.name)}`,
         });
         if (response.status === 201) {
@@ -324,9 +376,8 @@ function AuthModal({mode, onClose, onLogin}) {
           onLogin(safeUser); onClose();
         }
       }
-    } catch(e) {
-      setErr("Тармак катасы. Кайра аракет кылыңыз.");
-    } finally { setLoading(false); }
+    } catch(e) { setErr("Тармак катасы. Кайра аракет кылыңыз."); }
+    finally { setLoading(false); }
   }
 
   return (
@@ -335,8 +386,7 @@ function AuthModal({mode, onClose, onLogin}) {
         <button onClick={onClose} style={{position:"absolute",top:14,right:16,background:"none",border:"none",fontSize:"1.1rem",cursor:"pointer",color:"#94a3b8"}}>✕</button>
         <div style={{textAlign:"center",marginBottom:22}}>
           <div style={{display:"flex",justifyContent:"center",alignItems:"center",gap:10,marginBottom:8}}>
-            <Logo size={40}/>
-            <div style={{fontWeight:900,fontSize:"1.4rem",color:"#0f172a",letterSpacing:"-0.03em"}}>Versel</div>
+            <Logo size={40}/><div style={{fontWeight:900,fontSize:"1.4rem",color:"#0f172a",letterSpacing:"-0.03em"}}>Versel</div>
           </div>
           <div style={{fontSize:"0.78rem",color:"#94a3b8",marginTop:2}}>Кош келдиңиз!</div>
         </div>
@@ -356,9 +406,6 @@ function AuthModal({mode, onClose, onLogin}) {
             <div style={{display:"flex",alignItems:"center",gap:9,background:"#fdf6f0",border:"1.5px solid #f5d5d0",borderRadius:10,padding:"10px 13px"}}>
               <span>📞</span><input style={{flex:1,border:"none",outline:"none",background:"transparent",fontSize:"0.9rem"}} name="phone" placeholder="Телефон (милдеттүү эмес)" value={f.phone} onChange={up}/>
             </div>
-            <div style={{display:"flex",alignItems:"center",gap:9,background:"#fdf6f0",border:"1.5px solid #f5d5d0",borderRadius:10,padding:"10px 13px"}}>
-              <span>🖼</span><input style={{flex:1,border:"none",outline:"none",background:"transparent",fontSize:"0.9rem"}} name="avatar" placeholder="Avatar URL (милдеттүү эмес)" value={f.avatar} onChange={up}/>
-            </div>
           </>}
           <div style={{display:"flex",alignItems:"center",gap:9,background:"#fdf6f0",border:"1.5px solid #f5d5d0",borderRadius:10,padding:"10px 13px"}}>
             <span>✉️</span><input style={{flex:1,border:"none",outline:"none",background:"transparent",fontSize:"0.9rem"}} name="email" type="email" placeholder="Email *" value={f.email} onChange={up}/>
@@ -371,15 +418,8 @@ function AuthModal({mode, onClose, onLogin}) {
           {err && <div style={{background:"#fef2f2",color:"#dc2626",fontSize:"0.82rem",padding:"8px 12px",borderRadius:8,fontWeight:600}}>⚠️ {err}</div>}
           <button onClick={go} disabled={loading}
             style={{background:loading?"#f1948a":"linear-gradient(135deg,#c0392b,#e74c3c)",color:"#fff",border:"none",borderRadius:10,padding:"12px",fontWeight:700,fontSize:"0.95rem",cursor:loading?"not-allowed":"pointer",marginTop:4,display:"flex",alignItems:"center",justifyContent:"center",gap:8}}>
-            {loading
-              ? <><span style={{width:14,height:14,border:"2px solid #fff",borderTopColor:"transparent",borderRadius:"50%",display:"inline-block",animation:"spin 0.7s linear infinite"}}></span>Жүктөлүүдө...</>
-              : tab==="login"?"Кирүү →":"Катталуу →"}
+            {loading?<><span style={{width:14,height:14,border:"2px solid #fff",borderTopColor:"transparent",borderRadius:"50%",display:"inline-block",animation:"spin 0.7s linear infinite"}}></span>Жүктөлүүдө...</>:tab==="login"?"Кирүү →":"Катталуу →"}
           </button>
-          {tab==="login" && (
-            <div style={{textAlign:"center",fontSize:"0.74rem",color:"#94a3b8"}}>
-              Аккаунт жокпу? <span onClick={()=>setTab("signup")} style={{color:"#c0392b",cursor:"pointer",fontWeight:700}}>Катталуу</span>
-            </div>
-          )}
         </div>
       </div>
       <style>{`@keyframes spin{to{transform:rotate(360deg)}}`}</style>
@@ -393,7 +433,6 @@ function CartModal({cart, user, onClose, onRemove, onQty, onOrder}) {
   const [done, setDone] = useState(false);
 
   function handleOrder() {
-    // WhatsApp'ка билдирүү жибер
     sendWhatsAppOrder(cart, user);
     onOrder();
     setDone(true);
@@ -405,10 +444,7 @@ function CartModal({cart, user, onClose, onRemove, onQty, onOrder}) {
         <div style={{textAlign:"center",padding:40}}>
           <div style={{fontSize:"5rem",marginBottom:14}}>🎉</div>
           <div style={{fontWeight:900,fontSize:"1.5rem",color:"#16a34a",marginBottom:8}}>Заказ кабыл алынды!</div>
-          <div style={{color:"#64748b",fontSize:"0.9rem",marginBottom:8}}>WhatsApp'ка билдирүү жиберилди</div>
-          <div style={{color:"#22c55e",fontSize:"0.82rem",marginBottom:24,display:"flex",alignItems:"center",justifyContent:"center",gap:6}}>
-            <span style={{fontSize:"1.2rem"}}>💬</span> Жакында байланышабыз
-          </div>
+          <div style={{color:"#64748b",fontSize:"0.9rem",marginBottom:24}}>WhatsApp'ка билдирүү жиберилди</div>
           <button onClick={onClose} style={{background:"linear-gradient(135deg,#c0392b,#e74c3c)",color:"#fff",border:"none",borderRadius:12,padding:"12px 32px",fontWeight:700,cursor:"pointer",fontSize:"1rem"}}>Жабуу</button>
         </div>
       </div>
@@ -445,14 +481,8 @@ function CartModal({cart, user, onClose, onRemove, onQty, onOrder}) {
         </div>
         {cart.length>0 && (
           <div style={{padding:"14px 20px",borderTop:"1px solid #f1f5f9",background:"#fdf6f0"}}>
-            <div style={{display:"flex",justifyContent:"space-between",marginBottom:5,fontSize:"0.85rem",color:"#64748b"}}><span>Товар саны:</span><b style={{color:"#0f172a"}}>{cart.reduce((s,i)=>s+i.qty,0)} шт.</b></div>
             <div style={{display:"flex",justifyContent:"space-between",marginBottom:16}}><b style={{fontSize:"1rem",color:"#0f172a"}}>Итого:</b><b style={{fontSize:"1.3rem",color:"#ef4444"}}>{total.toLocaleString()} ₽</b></div>
-            {/* WhatsApp билдирүүсү */}
-            <div style={{background:"#f0fdf4",border:"1px solid #bbf7d0",borderRadius:10,padding:"8px 12px",marginBottom:10,display:"flex",alignItems:"center",gap:8,fontSize:"0.78rem",color:"#15803d"}}>
-              <span style={{fontSize:"1rem"}}>💬</span>
-              <span>Заказ берилгенден кийин <b>WhatsApp'ка</b> билдирүү жиберилет</span>
-            </div>
-            <button onClick={handleOrder} style={{width:"100%",padding:"13px",background:"linear-gradient(135deg,#25d366,#128c7e)",color:"#fff",border:"none",borderRadius:12,fontWeight:800,fontSize:"0.95rem",cursor:"pointer",boxShadow:"0 4px 14px rgba(37,211,102,0.4)",display:"flex",alignItems:"center",justifyContent:"center",gap:8}}>
+            <button onClick={handleOrder} style={{width:"100%",padding:"13px",background:"linear-gradient(135deg,#25d366,#128c7e)",color:"#fff",border:"none",borderRadius:12,fontWeight:800,fontSize:"0.95rem",cursor:"pointer",display:"flex",alignItems:"center",justifyContent:"center",gap:8}}>
               <span style={{fontSize:"1.1rem"}}>💬</span> Заказ берүү (WhatsApp)
             </button>
           </div>
@@ -466,7 +496,7 @@ function CartModal({cart, user, onClose, onRemove, onQty, onOrder}) {
 function DetailPage({product, cart, onAdd, onBack}) {
   const [selSize,setSelSize]=useState(null);
   const [sizeErr,setSizeErr]=useState(false);
-  const [selImg, setSelImg] =useState(0);
+  const [selImg,setSelImg]=useState(0);
   const inCart=cart.some(c=>c.id===product.id);
   const sizes=SZ[product.cat]||null;
   const bc=product.badge?BC[product.badge]:null;
@@ -479,12 +509,12 @@ function DetailPage({product, cart, onAdd, onBack}) {
 
   return (
     <div style={{maxWidth:1060,margin:"0 auto",padding:"22px 24px"}}>
-      <button onClick={onBack} style={{display:"inline-flex",alignItems:"center",gap:6,background:"#fffaf8",border:"1.5px solid #f5d5d0",borderRadius:9,padding:"8px 18px",cursor:"pointer",fontWeight:700,fontSize:"0.85rem",color:"#64748b",marginBottom:18,boxShadow:"0 1px 4px rgba(0,0,0,0.05)"}}>← Артка</button>
+      <button onClick={onBack} style={{display:"inline-flex",alignItems:"center",gap:6,background:"#fffaf8",border:"1.5px solid #f5d5d0",borderRadius:9,padding:"8px 18px",cursor:"pointer",fontWeight:700,fontSize:"0.85rem",color:"#64748b",marginBottom:18}}>← Артка</button>
       <div style={{display:"flex",gap:28,background:"#fffaf8",borderRadius:20,padding:28,boxShadow:"0 4px 32px rgba(0,0,0,0.07)",flexWrap:"wrap",border:"1px solid #fae8e6"}}>
         <div style={{display:"flex",gap:12,flexShrink:0}}>
           <div style={{display:"flex",flexDirection:"column",gap:10}}>
             {imgs.map((src,i)=>(
-              <div key={i} onClick={()=>setSelImg(i)} style={{width:70,height:70,borderRadius:10,overflow:"hidden",cursor:"pointer",flexShrink:0,border:selImg===i?"2.5px solid #e74c3c":"2px solid #e2e8f0",transition:"border 0.15s"}}>
+              <div key={i} onClick={()=>setSelImg(i)} style={{width:70,height:70,borderRadius:10,overflow:"hidden",cursor:"pointer",flexShrink:0,border:selImg===i?"2.5px solid #e74c3c":"2px solid #e2e8f0"}}>
                 <img src={src} alt="" style={{width:"100%",height:"100%",objectFit:"cover"}}/>
               </div>
             ))}
@@ -492,10 +522,6 @@ function DetailPage({product, cart, onAdd, onBack}) {
           <div style={{position:"relative",width:300,height:340,borderRadius:16,overflow:"hidden",background:"#fdf6f0",flexShrink:0}}>
             <img src={imgs[selImg]} alt={product.title} style={{width:"100%",height:"100%",objectFit:"cover"}}/>
             {bc&&<div style={{position:"absolute",top:12,left:12,background:bc.bg,color:bc.c,fontSize:"0.75rem",fontWeight:800,padding:"4px 12px",borderRadius:20}}>{product.badge}</div>}
-            <div style={{position:"absolute",bottom:10,right:10,background:"rgba(255,255,255,0.88)",borderRadius:9,padding:"5px 10px",display:"flex",alignItems:"center",gap:5,backdropFilter:"blur(6px)",boxShadow:"0 2px 8px rgba(0,0,0,0.1)"}}>
-              <Logo size={18}/>
-              <span style={{fontSize:"0.68rem",fontWeight:800,color:"#c0392b",letterSpacing:"0.06em"}}>VERSEL</span>
-            </div>
           </div>
         </div>
         <div style={{flex:1,minWidth:260,display:"flex",flexDirection:"column"}}>
@@ -529,17 +555,9 @@ function DetailPage({product, cart, onAdd, onBack}) {
             <button disabled={product.stock===0} onClick={handleAdd}
               style={{padding:"13px 28px",border:"none",borderRadius:12,fontWeight:800,fontSize:"0.95rem",cursor:product.stock===0?"not-allowed":"pointer",
                 background:product.stock===0?"#e2e8f0":inCart?"linear-gradient(135deg,#15803d,#16a34a)":"linear-gradient(135deg,#c0392b,#e74c3c)",
-                color:product.stock===0?"#94a3b8":"#fff",boxShadow:product.stock===0?"none":"0 4px 14px rgba(37,99,235,0.35)"}}>
+                color:product.stock===0?"#94a3b8":"#fff"}}>
               {product.stock===0?"✕ Жок":inCart?"✓ Корзинада":"Корзинага кош"}
             </button>
-          </div>
-          <div style={{display:"flex",gap:8,flexWrap:"wrap"}}>
-            {[["🚚","Жеткирүү","1-3 күн"],["🔒","Гарантия","12 ай"],["↩","Кайтаруу","14 күн"]].map(([icon,t,v])=>(
-              <div key={t} style={{display:"flex",alignItems:"center",gap:8,background:"#fdf6f0",borderRadius:10,padding:"10px 13px",flex:1,minWidth:88,border:"1px solid #fae8e6"}}>
-                <span style={{fontSize:"1.1rem"}}>{icon}</span>
-                <div><div style={{fontWeight:700,fontSize:"0.75rem",color:"#374151"}}>{t}</div><div style={{fontSize:"0.7rem",color:"#94a3b8"}}>{v}</div></div>
-              </div>
-            ))}
           </div>
         </div>
       </div>
@@ -552,17 +570,20 @@ function HomePage({goProducts,goLogin}) {
   return (
     <div>
       <div style={{background:"linear-gradient(135deg,#1a0a08 0%,#3d1410 60%,#2d0d0d 100%)",padding:"56px 24px 60px",position:"relative",overflow:"hidden"}}>
-        <div style={{position:"absolute",top:"-30%",right:"0",width:500,height:500,background:"radial-gradient(circle,rgba(192,57,43,0.15),transparent 70%)",borderRadius:"50%",pointerEvents:"none"}}/>
         <div style={{maxWidth:1060,margin:"0 auto",display:"flex",alignItems:"center",gap:48,flexWrap:"wrap",position:"relative",zIndex:1}}>
           <div style={{flex:1,minWidth:260}}>
             <div style={{display:"inline-flex",alignItems:"center",gap:8,background:"rgba(192,57,43,0.2)",color:"#f1948a",fontWeight:700,fontSize:"0.78rem",padding:"6px 16px",borderRadius:20,marginBottom:18,border:"1px solid rgba(192,57,43,0.3)"}}>🔥 Мегараспродажа жүрүп жатат!</div>
             <h1 style={{fontSize:"clamp(1.9rem,4.5vw,3.1rem)",fontWeight:900,lineHeight:1.15,color:"#fff",margin:"0 0 16px"}}>
               Эң мыкты<br/><span style={{background:"linear-gradient(90deg,#e74c3c,#fadbd8)",WebkitBackgroundClip:"text",WebkitTextFillColor:"transparent"}}>товарлар</span><br/>бир жерде
             </h1>
-            <p style={{fontSize:"0.95rem",color:"#94a3b8",lineHeight:1.85,margin:"0 0 28px",maxWidth:400}}>Телефондор, кийимдер, оюнчуктар — 100 миңден ашык товар, тез жеткирүү</p>
+            <p style={{fontSize:"0.95rem",color:"#94a3b8",lineHeight:1.85,margin:"0 0 28px",maxWidth:400}}>Телефондор, кийимдер, оюнчуктар — 100 миңден ашук товар, тез жеткирүү</p>
             <div style={{display:"flex",gap:12,flexWrap:"wrap"}}>
-              <button onClick={goProducts} style={{background:"linear-gradient(135deg,#c0392b,#e74c3c)",color:"#fff",border:"none",borderRadius:12,padding:"13px 28px",fontWeight:700,fontSize:"0.95rem",cursor:"pointer",boxShadow:"0 4px 20px rgba(192,57,43,0.4)"}}>Товарларды көрүү →</button>
+              <button onClick={goProducts} style={{background:"linear-gradient(135deg,#c0392b,#e74c3c)",color:"#fff",border:"none",borderRadius:12,padding:"13px 28px",fontWeight:700,fontSize:"0.95rem",cursor:"pointer"}}>Товарларды көрүү →</button>
               <button onClick={goLogin} style={{background:"rgba(255,255,255,0.08)",border:"1px solid rgba(255,200,190,0.3)",borderRadius:12,padding:"13px 22px",fontWeight:700,fontSize:"0.9rem",color:"#fff",cursor:"pointer"}}>Кирүү</button>
+            </div>
+            {/* Author badge on hero */}
+            <div style={{marginTop:28}}>
+              <AuthorBadge/>
             </div>
           </div>
           <div style={{flex:1,minWidth:260,maxWidth:440}}>
@@ -583,7 +604,7 @@ function HomePage({goProducts,goLogin}) {
         <h2 style={{fontWeight:900,fontSize:"1.25rem",marginBottom:18,color:"#0f172a"}}>🏪 Категориялар</h2>
         <div style={{display:"grid",gridTemplateColumns:"repeat(auto-fill,minmax(138px,1fr))",gap:12}}>
           {CATS.filter(c=>c!=="Баары").map(cat=>(
-            <button key={cat} onClick={goProducts} style={{background:"#fffaf8",border:"1px solid #f5d5d0",borderRadius:16,padding:"20px 12px",cursor:"pointer",display:"flex",flexDirection:"column",alignItems:"center",gap:7,boxShadow:"0 1px 4px rgba(0,0,0,0.04)"}}>
+            <button key={cat} onClick={goProducts} style={{background:"#fffaf8",border:"1px solid #f5d5d0",borderRadius:16,padding:"20px 12px",cursor:"pointer",display:"flex",flexDirection:"column",alignItems:"center",gap:7}}>
               <span style={{fontSize:"2.2rem"}}>{ICONS[cat]}</span><span style={{fontWeight:700,fontSize:"0.82rem",color:"#374151"}}>{cat}</span>
             </button>
           ))}
@@ -600,7 +621,7 @@ function AboutPage() {
       <div style={{background:"#fffaf8",borderRadius:20,boxShadow:"0 4px 24px rgba(0,0,0,0.06)",overflow:"hidden",border:"1px solid #fae8e6"}}>
         <div style={{background:"linear-gradient(135deg,#2d0d0d,#5a1a15)",padding:"38px 40px 30px",textAlign:"center"}}>
           <div style={{display:"flex",justifyContent:"center",marginBottom:14}}><Logo size={52}/></div>
-          <h1 style={{fontSize:"1.7rem",fontWeight:900,color:"#fff",marginBottom:6,letterSpacing:"-0.03em"}}>Versel</h1>
+          <h1 style={{fontSize:"1.7rem",fontWeight:900,color:"#fff",marginBottom:6}}>Versel</h1>
           <p style={{color:"#94a3b8",fontSize:"0.88rem"}}>Кыргызстандын эң ишенимдүү онлайн дүкөнү</p>
         </div>
         <div style={{padding:"30px 36px"}}>
@@ -612,12 +633,28 @@ function AboutPage() {
               </div>
             ))}
           </div>
-          <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:10}}>
+          <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:10,marginBottom:24}}>
             {[["📍 Дарек","Бишкек, Чүй 115"],["📞 Телефон","+996 312 000 000"],["✉️ Email","info@techstore.kg"],["⏰ Иш убактысы","9:00-21:00 күн сайын"]].map(([t,v])=>(
               <div key={t} style={{background:"#fdf6f0",borderRadius:10,padding:14,border:"1px solid #fae8e6"}}>
                 <div style={{fontWeight:700,fontSize:"0.8rem",color:"#c0392b",marginBottom:3}}>{t}</div><div style={{fontSize:"0.84rem",color:"#64748b"}}>{v}</div>
               </div>
             ))}
+          </div>
+          {/* Developer section in About */}
+          <div style={{background:"linear-gradient(135deg,#1a0a08,#2d0d0d)",borderRadius:16,padding:"22px 24px",border:"1px solid rgba(192,57,43,0.3)"}}>
+            <div style={{color:"rgba(255,255,255,0.5)",fontSize:"0.72rem",fontWeight:700,textTransform:"uppercase",letterSpacing:"0.08em",marginBottom:14}}>💻 Иштеген адам</div>
+            <div style={{display:"flex",alignItems:"center",gap:16,flexWrap:"wrap"}}>
+              <div style={{width:56,height:56,borderRadius:"50%",background:"linear-gradient(135deg,#c0392b,#e74c3c)",display:"flex",alignItems:"center",justifyContent:"center",fontSize:"1.4rem",fontWeight:900,color:"#fff",flexShrink:0,boxShadow:"0 4px 16px rgba(192,57,43,0.4)"}}>ЖЭ</div>
+              <div>
+                <div style={{fontSize:"1.15rem",fontWeight:900,color:"#fff",marginBottom:4}}>Жусупов Элдос</div>
+                <div style={{fontSize:"0.8rem",color:"rgba(255,255,255,0.45)",marginBottom:8}}>Frontend Developer · Versel дүкөнүн курган</div>
+                <div style={{display:"flex",gap:6,flexWrap:"wrap"}}>
+                  {["React","JavaScript","Axios","REST API","MockAPI"].map(tag=>(
+                    <span key={tag} style={{fontSize:"0.65rem",fontWeight:700,color:"rgba(192,57,43,0.9)",background:"rgba(192,57,43,0.12)",border:"1px solid rgba(192,57,43,0.3)",padding:"3px 9px",borderRadius:20}}>{tag}</span>
+                  ))}
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -645,7 +682,7 @@ function ProductsList({products,cart,onAdd,onDetail}) {
   return (
     <div style={{maxWidth:1200,margin:"0 auto",padding:"20px 24px"}}>
       <div style={{display:"flex",gap:10,marginBottom:18,flexWrap:"wrap"}}>
-        <div style={{display:"flex",alignItems:"center",gap:8,background:"#fffaf8",border:"1.5px solid #f5d5d0",borderRadius:12,padding:"9px 14px",flex:1,maxWidth:420,boxShadow:"0 1px 4px rgba(0,0,0,0.04)"}}>
+        <div style={{display:"flex",alignItems:"center",gap:8,background:"#fffaf8",border:"1.5px solid #f5d5d0",borderRadius:12,padding:"9px 14px",flex:1,maxWidth:420}}>
           <span style={{color:"#94a3b8"}}>🔍</span>
           <input style={{border:"none",outline:"none",fontSize:"0.9rem",width:"100%",background:"transparent"}} placeholder="Товар издөө..." value={search} onChange={e=>setSearch(e.target.value)}/>
           {search&&<button style={{background:"none",border:"none",cursor:"pointer",color:"#cbd5e1"}} onClick={()=>setSearch("")}>✕</button>}
@@ -671,11 +708,6 @@ function ProductsList({products,cart,onAdd,onDetail}) {
             <div style={{fontSize:"0.78rem",color:"#64748b",fontWeight:600,marginBottom:6}}>{maxP.toLocaleString()} ₽ чейин</div>
             <input type="range" min={0} max={300000} step={1000} value={maxP} style={{width:"100%",accentColor:"#e74c3c"}} onChange={e=>setMaxP(+e.target.value)}/>
           </div>
-          <div style={{marginTop:14,background:"linear-gradient(135deg,#fef2f2,#fff2f0)",borderRadius:10,padding:12,textAlign:"center",border:"1px solid #fee2e2"}}>
-            <div style={{fontSize:"1.2rem"}}>🔥</div>
-            <div style={{fontWeight:800,fontSize:"0.78rem",color:"#ef4444"}}>Акция!</div>
-            <div style={{fontSize:"0.7rem",color:"#94a3b8",marginTop:2}}>Бардыгына 5% скидка</div>
-          </div>
         </aside>
         <div style={{flex:1,minWidth:0}}>
           <div style={{marginBottom:12,fontSize:"0.83rem",color:"#94a3b8"}}>Табылды: <b style={{color:"#c0392b"}}>{list.length}</b> товар</div>
@@ -688,11 +720,6 @@ function ProductsList({products,cart,onAdd,onDetail}) {
                 <div key={p.id} onClick={()=>onDetail(p.id)} style={{background:"#fffaf8",borderRadius:14,boxShadow:"0 2px 10px rgba(0,0,0,0.05)",overflow:"hidden",cursor:"pointer",border:"1px solid #fae8e6"}}>
                   <div style={{position:"relative"}}>
                     <img src={p.img} alt="" style={{width:"100%",height:145,objectFit:"cover",display:"block"}}/>
-                    {/* Versel логотип — сүрөттүн астында */}
-                    <div style={{position:"absolute",bottom:6,right:6,background:"rgba(255,255,255,0.85)",borderRadius:7,padding:"3px 8px",display:"flex",alignItems:"center",gap:4,backdropFilter:"blur(4px)"}}>
-                      <Logo size={13}/>
-                      <span style={{fontSize:"0.58rem",fontWeight:800,color:"#c0392b",letterSpacing:"0.06em"}}>VERSEL</span>
-                    </div>
                     {bc&&<div style={{position:"absolute",top:8,left:8,background:bc.bg,color:bc.c,fontSize:"0.62rem",fontWeight:800,padding:"2px 8px",borderRadius:20}}>{p.badge}</div>}
                     {inCart&&<div style={{position:"absolute",top:8,right:8,background:"#16a34a",color:"#fff",fontSize:"0.62rem",fontWeight:700,padding:"2px 7px",borderRadius:20}}>✓</div>}
                   </div>
@@ -723,45 +750,36 @@ function ProductsList({products,cart,onAdd,onDetail}) {
 
 // ─── MAIN APP ────────────────────────────────────────────────────────────
 export default function App() {
-  const [page,     setPage]     = useState("home");
-  const [products, setProducts] = useState(DATA);
-  const [cart,     setCart]     = useState([]);
-  const [cartOpen, setCartOpen] = useState(false);
-  const [authMode, setAuthMode] = useState(null);
-  const [menuOpen, setMenuOpen] = useState(false);
-  const [detailId, setDetailId] = useState(null);
+  const [page,setPage]=useState("home");
+  const [products,setProducts]=useState(DATA);
+  const [cart,setCart]=useState([]);
+  const [cartOpen,setCartOpen]=useState(false);
+  const [authMode,setAuthMode]=useState(null);
+  const [menuOpen,setMenuOpen]=useState(false);
+  const [detailId,setDetailId]=useState(null);
 
-  // sessionStorage'да сакталат — Local Storage'да КӨРҮНБӨЙТ, пароль жок
-  const [user, setUser] = useState(() => {
-    try {
-      const s = sessionStorage.getItem("vs");
-      return s ? _d(s) : null;
-    } catch { return null; }
+  const [user,setUser]=useState(()=>{
+    try { const s=sessionStorage.getItem("vs"); return s?_d(s):null; } catch { return null; }
   });
 
-  useEffect(() => {
-    // Барак ачылганда theme жаз (башка эч нерсе жок)
-    if (!localStorage.getItem("theme")) {
-      localStorage.setItem("theme", "system");
-    }
-    // Эски user/vrs_session ачкычтарын тазала
+  useEffect(()=>{
+    if(!localStorage.getItem("theme"))localStorage.setItem("theme","system");
     localStorage.removeItem("user");
     localStorage.removeItem("vrs_session");
-  }, []);
+  },[]);
 
-  function handleLogin(userData) {
+  function handleLogin(userData){
     setUser(userData);
-    try { sessionStorage.setItem("vs", _e(userData)); } catch {}
+    try{sessionStorage.setItem("vs",_e(userData));}catch{}
   }
 
-  function logout() {
-    setUser(null);
-    setMenuOpen(false);
-    try { sessionStorage.removeItem("vs"); } catch {}
+  function logout(){
+    setUser(null);setMenuOpen(false);
+    try{sessionStorage.removeItem("vs");}catch{}
   }
 
-  function addToCart(product) {
-    const prod = products.find(p=>p.id===product.id);
+  function addToCart(product){
+    const prod=products.find(p=>p.id===product.id);
     if(!prod||prod.stock===0)return;
     setProducts(prev=>prev.map(p=>p.id===product.id?{...p,stock:p.stock-1}:p));
     setCart(prev=>{
@@ -771,13 +789,13 @@ export default function App() {
     });
   }
 
-  function removeFromCart(id) {
+  function removeFromCart(id){
     const item=cart.find(i=>i.id===id);
     if(item)setProducts(prev=>prev.map(p=>p.id===id?{...p,stock:p.stock+item.qty}:p));
     setCart(prev=>prev.filter(i=>i.id!==id));
   }
 
-  function changeQty(id,delta) {
+  function changeQty(id,delta){
     const item=cart.find(i=>i.id===id);
     const prod=products.find(p=>p.id===id);
     if(!item)return;
@@ -793,18 +811,26 @@ export default function App() {
   const detailProd=products.find(p=>p.id===detailId);
 
   return (
-    <div style={{fontFamily:"'Segoe UI',system-ui,sans-serif",background:"#fdf6f0",minHeight:"100vh"}}>
+    <div style={{fontFamily:"'Segoe UI',system-ui,sans-serif",background:"#fdf6f0",minHeight:"100vh",display:"flex",flexDirection:"column"}}>
+      {/* ── HEADER ── */}
       <header style={{display:"flex",alignItems:"center",justifyContent:"space-between",padding:"0 24px",height:62,background:"#fffaf8",borderBottom:"1px solid #f5d5d0",position:"sticky",top:0,zIndex:50,gap:10}}>
-        {/* ✅ VERSEL ЛОГОТИП */}
         <div onClick={()=>goTo("home")} style={{fontWeight:800,fontSize:"1.2rem",color:"#0f172a",cursor:"pointer",whiteSpace:"nowrap",display:"flex",alignItems:"center",gap:9,letterSpacing:"-0.03em"}}>
           <Logo size={32}/>
           <span style={{background:"linear-gradient(135deg,#8b1a1a,#c0392b)",WebkitBackgroundClip:"text",WebkitTextFillColor:"transparent"}}>Versel</span>
         </div>
+
+        {/* Author tag in header */}
+        <div style={{display:"flex",alignItems:"center",gap:6,background:"rgba(192,57,43,0.06)",border:"1px solid rgba(192,57,43,0.15)",borderRadius:20,padding:"4px 12px 4px 6px"}}>
+          <div style={{width:22,height:22,borderRadius:"50%",background:"linear-gradient(135deg,#c0392b,#e74c3c)",display:"flex",alignItems:"center",justifyContent:"center",fontSize:"0.6rem",fontWeight:900,color:"#fff",flexShrink:0}}>ЖЭ</div>
+          <span style={{fontSize:"0.72rem",fontWeight:700,color:"#c0392b",whiteSpace:"nowrap"}}>Жусупов Элдос</span>
+        </div>
+
         <nav style={{display:"flex",gap:2}}>
           {[["home","🏠 Home"],["products","🛍 Products"],["about","ℹ️ About"]].map(([k,l])=>(
             <button key={k} onClick={()=>goTo(k)} style={{background:page===k?"#fff0ee":"transparent",border:"none",padding:"8px 13px",borderRadius:8,cursor:"pointer",fontWeight:600,fontSize:"0.85rem",color:page===k?"#c0392b":"#64748b",whiteSpace:"nowrap"}}>{l}</button>
           ))}
         </nav>
+
         <div style={{display:"flex",gap:8,alignItems:"center"}}>
           <button onClick={()=>setCartOpen(true)} style={{position:"relative",background:"#fff2f0",border:"1.5px solid #fadbd8",borderRadius:10,padding:"8px 14px",cursor:"pointer",fontSize:"1.1rem",display:"flex",alignItems:"center"}}>
             🛒
@@ -813,23 +839,15 @@ export default function App() {
           {user?(
             <div style={{position:"relative"}}>
               <button onClick={()=>setMenuOpen(!menuOpen)} style={{background:"#fff2f0",border:"1.5px solid #fadbd8",borderRadius:9,padding:"8px 13px",cursor:"pointer",fontWeight:700,fontSize:"0.82rem",color:"#c0392b",display:"flex",alignItems:"center",gap:7}}>
-                {user.avatar
-                  ? <img src={user.avatar} alt="" style={{width:22,height:22,borderRadius:"50%",objectFit:"cover"}}/>
-                  : <span>👤</span>}
+                {user.avatar?<img src={user.avatar} alt="" style={{width:22,height:22,borderRadius:"50%",objectFit:"cover"}}/>:<span>👤</span>}
                 {user.name} ▾
               </button>
               {menuOpen&&(
                 <div style={{position:"absolute",top:"calc(100% + 6px)",right:0,background:"#fffaf8",borderRadius:12,boxShadow:"0 8px 24px rgba(0,0,0,0.1)",border:"1px solid #f5d5d0",minWidth:200,zIndex:60,overflow:"hidden"}}>
                   <div style={{padding:"12px 14px",borderBottom:"1px solid #f1f5f9",display:"flex",alignItems:"center",gap:10}}>
-                    {user.avatar
-                      ? <img src={user.avatar} alt="" style={{width:36,height:36,borderRadius:"50%",objectFit:"cover",flexShrink:0}}/>
-                      : <div style={{width:36,height:36,borderRadius:"50%",background:"#fff2f0",display:"flex",alignItems:"center",justifyContent:"center",fontSize:"1.1rem",flexShrink:0}}>👤</div>}
-                    <div>
-                      <div style={{fontWeight:700,fontSize:"0.85rem",color:"#0f172a"}}>{user.name}</div>
-                      <div style={{fontSize:"0.72rem",color:"#94a3b8"}}>{user.email}</div>
-                    </div>
+                    {user.avatar?<img src={user.avatar} alt="" style={{width:36,height:36,borderRadius:"50%",objectFit:"cover",flexShrink:0}}/>:<div style={{width:36,height:36,borderRadius:"50%",background:"#fff2f0",display:"flex",alignItems:"center",justifyContent:"center",fontSize:"1.1rem",flexShrink:0}}>👤</div>}
+                    <div><div style={{fontWeight:700,fontSize:"0.85rem",color:"#0f172a"}}>{user.name}</div><div style={{fontSize:"0.72rem",color:"#94a3b8"}}>{user.email}</div></div>
                   </div>
-                  {user.phone&&<div style={{padding:"8px 14px",fontSize:"0.78rem",color:"#64748b",borderBottom:"1px solid #f1f5f9"}}>📞 {user.phone}</div>}
                   <button style={{display:"block",width:"100%",textAlign:"left",padding:"10px 14px",background:"none",border:"none",cursor:"pointer",fontSize:"0.85rem",fontWeight:600,color:"#374151"}} onClick={()=>goTo("about")}>ℹ️ Жөнүндө</button>
                   <button style={{display:"block",width:"100%",textAlign:"left",padding:"10px 14px",background:"none",border:"none",cursor:"pointer",fontSize:"0.85rem",fontWeight:600,color:"#ef4444"}} onClick={logout}>🚪 Чыгуу</button>
                 </div>
@@ -844,10 +862,16 @@ export default function App() {
         </div>
       </header>
 
-      {page==="home"     && <HomePage goProducts={()=>goTo("products")} goLogin={()=>setAuthMode("login")}/>}
-      {page==="products" && !detailId && <ProductsList products={products} cart={cart} onAdd={addToCart} onDetail={setDetailId}/>}
-      {page==="products" && detailId && detailProd && <DetailPage product={detailProd} cart={cart} onAdd={addToCart} onBack={()=>setDetailId(null)}/>}
-      {page==="about"    && <AboutPage/>}
+      {/* ── PAGES ── */}
+      <div style={{flex:1}}>
+        {page==="home"     && <HomePage goProducts={()=>goTo("products")} goLogin={()=>setAuthMode("login")}/>}
+        {page==="products" && !detailId && <ProductsList products={products} cart={cart} onAdd={addToCart} onDetail={setDetailId}/>}
+        {page==="products" && detailId && detailProd && <DetailPage product={detailProd} cart={cart} onAdd={addToCart} onBack={()=>setDetailId(null)}/>}
+        {page==="about"    && <AboutPage/>}
+      </div>
+
+      {/* ── FOOTER ── */}
+      <Footer/>
 
       {cartOpen&&<CartModal cart={cart} user={user} onClose={()=>setCartOpen(false)} onRemove={removeFromCart} onQty={changeQty} onOrder={()=>setCart([])}/>}
       {authMode&&<AuthModal mode={authMode} onClose={()=>setAuthMode(null)} onLogin={handleLogin}/>}
