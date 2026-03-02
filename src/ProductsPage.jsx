@@ -6,6 +6,27 @@ const API = "https://69a0082c3188b0b1d5378674.mockapi.io/eldos/eeee";
 const SHOP_WHATSAPP = "+996755111612"; 
 const SHOP_NAME = "Versel";
 
+// ─── ВАЛЮТА ───────────────────────────────────────────────────────────────────
+// Негизги валюта: KGS (сом). Баалар сомдо сакталат.
+const CURRENCIES = {
+  KGS: { label: "сом", symbol: "с",  flag: "🇰🇬", rate: 1       },
+  USD: { label: "USD", symbol: "$",  flag: "🇺🇸", rate: 0.01136 }, // 1 KGS ≈ 0.01136 USD
+  RUB: { label: "руб", symbol: "₽",  flag: "🇷🇺", rate: 1.30    }, // 1 KGS ≈ 1.30 RUB
+};
+
+function formatPrice(priceKGS, currency) {
+  const c = CURRENCIES[currency];
+  const converted = priceKGS * c.rate;
+  if (currency === "USD") {
+    return "$" + converted.toLocaleString("en-US", {minimumFractionDigits:2, maximumFractionDigits:2});
+  }
+  if (currency === "RUB") {
+    return Math.round(converted).toLocaleString("ru-RU") + " ₽";
+  }
+  // KGS
+  return Math.round(converted).toLocaleString("ru-RU") + " с";
+}
+
 const EXTRA_IMGS = {
   1:  ["https://avatars.mds.yandex.net/i?id=ca88cb399ce88afbdcb7044b5315a6f6908a1754-5239608-images-thumbs&n=13","https://myshop.pk/pub/media/catalog/product/cache/26f8091d81cea4b38d820a1d1a4f62be/s/a/samsung_myshop-pk-1_1_3.jpg","https://multibrandmobile.ru/wp-content/uploads/2024/12/bde40f7249e207acede2dfc57400acbd-900x626.png"],
   2:  ["https://images.unsplash.com/photo-1695048133142-1a20484d2569?w=600&q=80","https://images.unsplash.com/photo-1678685888221-cda773a3dcdb?w=600&q=80","https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=600&q=80"],
@@ -296,7 +317,7 @@ function Footer() {
 }
 
 // ─── WHATSAPP БИЛДИРҮҮ ЖИБЕР ─────────────────────────────────────────────────
-function sendWhatsAppOrder(cart, user) {
+function sendWhatsAppOrder(cart, user, currency = "KGS") {
   const total = cart.reduce((s, i) => s + i.price * i.qty, 0);
   const date = new Date().toLocaleString("ru-RU");
   let msg = `🛒 *ЖАҢЫ ЗАКАЗ — ${SHOP_NAME}*\n`;
@@ -312,9 +333,9 @@ function sendWhatsAppOrder(cart, user) {
   cart.forEach((item, i) => {
     msg += `${i + 1}. ${item.title}`;
     if (item.size) msg += ` (${item.size})`;
-    msg += ` × ${item.qty} шт. = ${(item.price * item.qty).toLocaleString()} ₽\n`;
+    msg += ` × ${item.qty} шт. = ${formatPrice(item.price * item.qty, currency)}\n`;
   });
-  msg += `\n💰 *ИТОГО: ${total.toLocaleString()} ₽*`;
+  msg += `\n💰 *ИТОГО: ${formatPrice(total, currency)}*`;
   msg += `\n\n✅ Заказ кабыл алуу үчүн кардар менен байланышыңыз!`;
   const phone = SHOP_WHATSAPP.replace(/[^0-9]/g, "");
   const url = `https://wa.me/${phone}?text=${encodeURIComponent(msg)}`;
@@ -428,12 +449,12 @@ function AuthModal({mode, onClose, onLogin}) {
 }
 
 // ─── CART ─────────────────────────────────────────────────────────────────────
-function CartModal({cart, user, onClose, onRemove, onQty, onOrder}) {
+function CartModal({cart, user, currency, onClose, onRemove, onQty, onOrder}) {
   const total = cart.reduce((s,i) => s + i.price*i.qty, 0);
   const [done, setDone] = useState(false);
 
   function handleOrder() {
-    sendWhatsAppOrder(cart, user);
+    sendWhatsAppOrder(cart, user, currency);
     onOrder();
     setDone(true);
   }
@@ -467,7 +488,7 @@ function CartModal({cart, user, onClose, onRemove, onQty, onOrder}) {
                 <div style={{flex:1,minWidth:0}}>
                   <div style={{fontWeight:700,fontSize:"0.84rem",color:"#0f172a",marginBottom:2,overflow:"hidden",textOverflow:"ellipsis",whiteSpace:"nowrap"}}>{item.title}</div>
                   {item.size && <div style={{fontSize:"0.72rem",color:"#94a3b8",marginBottom:3}}>Размер: <b style={{color:"#374151"}}>{item.size}</b></div>}
-                  <div style={{color:"#ef4444",fontWeight:800,fontSize:"0.9rem",marginBottom:6}}>{(item.price*item.qty).toLocaleString()} ₽</div>
+                  <div style={{color:"#ef4444",fontWeight:800,fontSize:"0.9rem",marginBottom:6}}>{formatPrice(item.price*item.qty, currency)}</div>
                   <div style={{display:"flex",alignItems:"center",gap:6}}>
                     <button onClick={()=>onQty(item.id,-1)} style={{width:26,height:26,border:"1.5px solid #f5d5d0",borderRadius:6,background:"#fffaf8",cursor:"pointer",fontWeight:800,fontSize:"0.95rem",display:"flex",alignItems:"center",justifyContent:"center"}}>−</button>
                     <span style={{fontWeight:800,minWidth:22,textAlign:"center"}}>{item.qty}</span>
@@ -481,7 +502,7 @@ function CartModal({cart, user, onClose, onRemove, onQty, onOrder}) {
         </div>
         {cart.length>0 && (
           <div style={{padding:"14px 20px",borderTop:"1px solid #f1f5f9",background:"#fdf6f0"}}>
-            <div style={{display:"flex",justifyContent:"space-between",marginBottom:16}}><b style={{fontSize:"1rem",color:"#0f172a"}}>Итого:</b><b style={{fontSize:"1.3rem",color:"#ef4444"}}>{total.toLocaleString()} ₽</b></div>
+            <div style={{display:"flex",justifyContent:"space-between",marginBottom:16}}><b style={{fontSize:"1rem",color:"#0f172a"}}>Итого:</b><b style={{fontSize:"1.3rem",color:"#ef4444"}}>{formatPrice(total, currency)}</b></div>
             <button onClick={handleOrder} style={{width:"100%",padding:"13px",background:"linear-gradient(135deg,#25d366,#128c7e)",color:"#fff",border:"none",borderRadius:12,fontWeight:800,fontSize:"0.95rem",cursor:"pointer",display:"flex",alignItems:"center",justifyContent:"center",gap:8}}>
               <span style={{fontSize:"1.1rem"}}>💬</span> Заказ берүү (WhatsApp)
             </button>
@@ -493,7 +514,7 @@ function CartModal({cart, user, onClose, onRemove, onQty, onOrder}) {
 }
 
 // ─── DETAIL PAGE ──────────────────────────────────────────────────────────────
-function DetailPage({product, cart, onAdd, onBack}) {
+function DetailPage({product, cart, onAdd, onBack, currency}) {
   const [selSize,setSelSize]=useState(null);
   const [sizeErr,setSizeErr]=useState(false);
   const [selImg,setSelImg]=useState(0);
@@ -550,7 +571,7 @@ function DetailPage({product, cart, onAdd, onBack}) {
           <div style={{display:"flex",alignItems:"flex-end",justifyContent:"space-between",gap:14,marginBottom:22,flexWrap:"wrap",marginTop:"auto"}}>
             <div>
               <div style={{fontSize:"0.75rem",color:"#94a3b8",marginBottom:2}}>Баасы</div>
-              <div style={{fontSize:"2rem",fontWeight:900,color:"#ef4444"}}>{product.price.toLocaleString()} ₽</div>
+              <div style={{fontSize:"2rem",fontWeight:900,color:"#ef4444"}}>{formatPrice(product.price, currency)}</div>
             </div>
             <button disabled={product.stock===0} onClick={handleAdd}
               style={{padding:"13px 28px",border:"none",borderRadius:12,fontWeight:800,fontSize:"0.95rem",cursor:product.stock===0?"not-allowed":"pointer",
@@ -663,7 +684,7 @@ function AboutPage() {
 }
 
 // ─── PRODUCTS LIST ────────────────────────────────────────────────────────────
-function ProductsList({products,cart,onAdd,onDetail}) {
+function ProductsList({products,cart,onAdd,onDetail,currency}) {
   const [search,setSearch]=useState("");
   const [cat,setCat]=useState("Баары");
   const [sort,setSort]=useState("default");
@@ -705,7 +726,7 @@ function ProductsList({products,cart,onAdd,onDetail}) {
           ))}
           <div style={{marginTop:16,paddingTop:14,borderTop:"1px solid #f1f5f9"}}>
             <div style={{fontWeight:800,fontSize:"0.74rem",textTransform:"uppercase",letterSpacing:"0.07em",color:"#94a3b8",marginBottom:8}}>Баасы</div>
-            <div style={{fontSize:"0.78rem",color:"#64748b",fontWeight:600,marginBottom:6}}>{maxP.toLocaleString()} ₽ чейин</div>
+            <div style={{fontSize:"0.78rem",color:"#64748b",fontWeight:600,marginBottom:6}}>{formatPrice(maxP, currency)} чейин</div>
             <input type="range" min={0} max={300000} step={1000} value={maxP} style={{width:"100%",accentColor:"#e74c3c"}} onChange={e=>setMaxP(+e.target.value)}/>
           </div>
         </aside>
@@ -728,7 +749,7 @@ function ProductsList({products,cart,onAdd,onDetail}) {
                     <div style={{fontSize:"0.83rem",fontWeight:800,marginBottom:4,color:"#0f172a",lineHeight:1.3}}>{p.title}</div>
                     <div style={{fontSize:"0.7rem",color:"#94a3b8",marginBottom:8,lineHeight:1.4}}>{p.desc.slice(0,48)}...</div>
                     <div style={{display:"flex",alignItems:"center",justifyContent:"space-between",marginBottom:8,gap:4,flexWrap:"wrap"}}>
-                      <span style={{fontWeight:900,color:"#ef4444",fontSize:"0.95rem"}}>{p.price.toLocaleString()} ₽</span>
+                      <span style={{fontWeight:900,color:"#ef4444",fontSize:"0.95rem"}}>{formatPrice(p.price, currency)}</span>
                       <StockTag n={p.stock} sm/>
                     </div>
                     <button disabled={p.stock===0} onClick={e=>{e.stopPropagation();if(p.stock>0)onAdd(p);}}
@@ -757,6 +778,7 @@ export default function App() {
   const [authMode,setAuthMode]=useState(null);
   const [menuOpen,setMenuOpen]=useState(false);
   const [detailId,setDetailId]=useState(null);
+  const [currency,setCurrency]=useState("KGS");
 
   const [user,setUser]=useState(()=>{
     try { const s=sessionStorage.getItem("vs"); return s?_d(s):null; } catch { return null; }
@@ -831,6 +853,20 @@ export default function App() {
           ))}
         </nav>
 
+        {/* ── ВАЛЮТА КОТОРГУЧ ── */}
+        <div style={{display:"flex",gap:3,background:"#f1f5f9",borderRadius:10,padding:3,flexShrink:0}}>
+          {Object.entries(CURRENCIES).map(([key,val])=>(
+            <button key={key} onClick={()=>setCurrency(key)}
+              style={{padding:"5px 10px",border:"none",borderRadius:7,cursor:"pointer",fontWeight:700,fontSize:"0.75rem",
+                background:currency===key?"#fff":"transparent",
+                color:currency===key?"#c0392b":"#64748b",
+                boxShadow:currency===key?"0 1px 4px rgba(0,0,0,0.1)":"none",
+                whiteSpace:"nowrap",transition:"all 0.15s"}}>
+              {val.flag} {key}
+            </button>
+          ))}
+        </div>
+
         <div style={{display:"flex",gap:8,alignItems:"center"}}>
           <button onClick={()=>setCartOpen(true)} style={{position:"relative",background:"#fff2f0",border:"1.5px solid #fadbd8",borderRadius:10,padding:"8px 14px",cursor:"pointer",fontSize:"1.1rem",display:"flex",alignItems:"center"}}>
             🛒
@@ -865,15 +901,15 @@ export default function App() {
       {/* ── PAGES ── */}
       <div style={{flex:1}}>
         {page==="home"     && <HomePage goProducts={()=>goTo("products")} goLogin={()=>setAuthMode("login")}/>}
-        {page==="products" && !detailId && <ProductsList products={products} cart={cart} onAdd={addToCart} onDetail={setDetailId}/>}
-        {page==="products" && detailId && detailProd && <DetailPage product={detailProd} cart={cart} onAdd={addToCart} onBack={()=>setDetailId(null)}/>}
+        {page==="products" && !detailId && <ProductsList products={products} cart={cart} onAdd={addToCart} onDetail={setDetailId} currency={currency}/>}
+        {page==="products" && detailId && detailProd && <DetailPage product={detailProd} cart={cart} onAdd={addToCart} onBack={()=>setDetailId(null)} currency={currency}/>}
         {page==="about"    && <AboutPage/>}
       </div>
 
       {/* ── FOOTER ── */}
       <Footer/>
 
-      {cartOpen&&<CartModal cart={cart} user={user} onClose={()=>setCartOpen(false)} onRemove={removeFromCart} onQty={changeQty} onOrder={()=>setCart([])}/>}
+      {cartOpen&&<CartModal cart={cart} user={user} currency={currency} onClose={()=>setCartOpen(false)} onRemove={removeFromCart} onQty={changeQty} onOrder={()=>setCart([])}/>}
       {authMode&&<AuthModal mode={authMode} onClose={()=>setAuthMode(null)} onLogin={handleLogin}/>}
     </div>
   );
